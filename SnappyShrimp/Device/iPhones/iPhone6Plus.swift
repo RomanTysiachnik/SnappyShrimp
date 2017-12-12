@@ -1,10 +1,4 @@
-//
-//  6Plus.swift
-//  Snapshot-tests
-//
-//  Created by Andrey Doroshko on 12/11/17.
-//  Copyright © 2017 Andrey Doroshko. All rights reserved.
-//
+//  Copyright © 2017 One by AOL : Publishers. All rights reserved.
 
 import Foundation
 

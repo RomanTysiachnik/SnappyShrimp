@@ -1,16 +1,10 @@
-//
-//  Pro10.swift
-//  Snapshot-tests
-//
-//  Created by Andrey Doroshko on 12/11/17.
-//  Copyright © 2017 Andrey Doroshko. All rights reserved.
-//
+//  Copyright © 2017 One by AOL : Publishers. All rights reserved.
 
 import Foundation
 
-extension Device {
+extension Device{
     @available(iOS 10.0, *)
-    public enum iPadPro10 {
+    public enum iPadPro9 {
         public enum portrait {
             public static let fullScreen = Presentation(
                 name: "iPad Pro10 FullScreen",
@@ -72,5 +66,4 @@ extension Device {
             )
         }
     }
-    
 }

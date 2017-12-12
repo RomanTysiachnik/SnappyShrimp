@@ -1,21 +1,15 @@
-//
-//  iPadMini.swift
-//  Snapshot-tests
-//
-//  Created by Andrey Doroshko on 12/11/17.
-//  Copyright © 2017 Andrey Doroshko. All rights reserved.
-//
+//  Copyright © 2017 One by AOL : Publishers. All rights reserved.
 
 import Foundation
 
 extension Device {
-    public enum iPadMini {
+    public enum iPadAir2{
         public static let portrait = Presentation(
-            name: "iPad mini FullScreen",
+            name: "iPad Air2 FullScreen",
             size: CGSize.iPadPro9,
             traitCollection: UITraitCollection.iPadOld.fullScreen)
         public static let landscape = Presentation(
-            name: "iPad mini Landscape FullScreen",
+            name: "iPad Air2 Landscape FullScreen",
             size: CGSize.iPadPro9.rotated,
             traitCollection: UITraitCollection.iPadOld.fullScreen)
     }
