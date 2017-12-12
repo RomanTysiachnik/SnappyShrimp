@@ -1,0 +1,3 @@
+[submodule "SnappyShrimp/submodule/ios-snapshot-test-case"]
+	path = SnappyShrimp/submodule/ios-snapshot-test-case
+	url = https://github.com/facebookarchive/ios-snapshot-test-case.git
