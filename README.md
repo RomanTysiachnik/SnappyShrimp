@@ -19,11 +19,11 @@ So, if you want to check screenshots on specific device (or list of devices), ju
         with context: Context = Context(),` 
 
 - presentation: for specific device
-- context: layoutDirection, contentSizeCategory and name could be chosen be user and not dependent from device, but seted "unspecified" by default 
+- context: layoutDirection, contentSizeCategory and name should be chosen be user and does not depend from device, but seted "unspecified" by default 
 
 How to set up:
 
-1. add it as a submodule to project
+1. add it as a submodule to your project
 2. run this comand `git submodule update --init --recursive`
 
 
