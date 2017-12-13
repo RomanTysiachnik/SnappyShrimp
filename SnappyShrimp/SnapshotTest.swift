@@ -21,9 +21,9 @@ open class SnapshotTest: FBSnapshotTestCase{
         file: StaticString = #file,
         line: UInt = #line) {
         
-        guard presentation.userInterfaceIdiom == UIDevice.current.userInterfaceIdiom else {
-            return
-        }
+        guard presentation.userInterfaceIdiom == UIDevice.current.userInterfaceIdiom else { return }
+        guard presentation.scale == UIScreen.main.scale else { return }
+        
         let window = HostWindow(presentation: presentation, context: context)
 
         window.rootViewController = controller

@@ -1,11 +1,7 @@
-//
-//  Presentation.swift
-//  
-//
-//  Created by Andrey Doroshko on 12/11/17.
-//
+//  Copyright © 2017 One by AOL : Publishers. All rights reserved.
 
 import Foundation
+
 public struct Presentation {
     let name: String
     let size: CGSize
@@ -25,5 +21,8 @@ public struct Presentation {
 extension Presentation {
     var userInterfaceIdiom: UIUserInterfaceIdiom {
         return self.traitCollection.userInterfaceIdiom
+    }
+    var scale: CGFloat {
+        return self.traitCollection.displayScale
     }
 }

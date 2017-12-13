@@ -7,8 +7,8 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "NO"
-            buildForRunning = "NO"
+            buildForTesting = "YES"
+            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
@@ -30,6 +30,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4214CBF81FDFE34A00C7AB61"
+            BuildableName = "SnappyShrimp.framework"
+            BlueprintName = "SnappyShrimp"
+            ReferencedContainer = "container:SnappyShrimp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -44,6 +53,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4214CBF81FDFE34A00C7AB61"
+            BuildableName = "SnappyShrimp.framework"
+            BlueprintName = "SnappyShrimp"
+            ReferencedContainer = "container:SnappyShrimp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
