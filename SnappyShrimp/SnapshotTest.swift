@@ -25,8 +25,9 @@ open class SnapshotTest: FBSnapshotTestCase{
         
         let window = HostWindow(presentation: presentation, context: context)
         controller.view.frame = presentation.size.asRect
-        
-        UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight, forKey: "orientation")
+        if let orientation = presentation.orientation {
+            UIDevice.current.setValue(orientation, forKey: "orientation")
+        }
         window.addSubview(controller.view)
         if #available(iOS 11.0, *) {
             controller.view.translatesAutoresizingMaskIntoConstraints = false

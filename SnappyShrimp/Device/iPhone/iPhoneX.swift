@@ -9,19 +9,19 @@ extension Device {
             name: "iPhone X Portrait",
             size: CGSize.iPhoneX,
             traitCollection: UITraitCollection.iPhoneX.portrait,
-            mask: iPhoneXMask.portrait,
-            orientation: .portrait)
+            orientation: .portrait,
+            mask: iPhoneXMask.portrait)
         public static let landscapeLeft = Presentation(
             name: "iPhone X Landscape Left",
             size: CGSize.iPhoneX.rotated,
             traitCollection: UITraitCollection.iPhoneX.landscape,
-            mask: iPhoneXMask.landscapeLeft,
-            orientation: .landscapeLeft)
+            orientation: .landscapeLeft,
+            mask: iPhoneXMask.landscapeLeft)
         public static let landscapeRight = Presentation(
             name: "iPhone X Landscape Right",
             size: CGSize.iPhoneX.rotated,
             traitCollection: UITraitCollection.iPhoneX.landscape,
-            mask: iPhoneXMask.landscapeRight,
-            orientation: .landscapeRight)
+            orientation: .landscapeRight,
+            mask: iPhoneXMask.landscapeRight)
     }
 }
