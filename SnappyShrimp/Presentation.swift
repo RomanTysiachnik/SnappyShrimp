@@ -7,14 +7,17 @@ public struct Presentation {
     let size: CGSize
     let traitCollection: UITraitCollection
     let mask: UIView?
+    let orientation: UIInterfaceOrientation
     
     public init(name: String, size: CGSize,
                 traitCollection: UITraitCollection,
+                orientation: UIInterfaceOrientation,
                 mask: UIView? = nil) {
         self.name = name
         self.size = size
         self.traitCollection = traitCollection
         self.mask = mask
+        self.orientation = orientation
     }
 }
 

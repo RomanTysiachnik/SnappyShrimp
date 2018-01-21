@@ -26,6 +26,7 @@ open class SnapshotTest: FBSnapshotTestCase{
         let window = HostWindow(presentation: presentation, context: context)
         controller.view.frame = presentation.size.asRect
         
+        UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight, forKey: "orientation")
         window.addSubview(controller.view)
         if #available(iOS 11.0, *) {
             controller.view.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +45,6 @@ open class SnapshotTest: FBSnapshotTestCase{
             .filter { !$0.isEmpty }
             .joined(separator: "_")
         
-        window.backgroundColor = .blue
         window.makeKeyAndVisible()
         FBSnapshotVerifyView(window, identifier: name, suffixes: [""], file: file, line: line)
     }

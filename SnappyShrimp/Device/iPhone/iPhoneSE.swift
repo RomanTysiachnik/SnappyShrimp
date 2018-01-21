@@ -7,10 +7,12 @@ extension Device {
         public static let portrait = Presentation(
             name: "iPhone SE Portrait",
             size: CGSize.iPhoneSE,
-            traitCollection: UITraitCollection.iPhone.portrait)
+            traitCollection: UITraitCollection.iPhone.portrait,
+            orientation: .portrait)
         public static let landscape = Presentation(
             name: "iPhone SE Landscape",
             size: CGSize.iPhoneSE.rotated,
-            traitCollection: UITraitCollection.iPhone.landscape)
+            traitCollection: UITraitCollection.iPhone.landscape,
+            orientation: .landscapeLeft)
     }
 }
