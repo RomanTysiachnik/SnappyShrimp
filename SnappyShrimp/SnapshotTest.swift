@@ -24,18 +24,18 @@ open class SnapshotTest: FBSnapshotTestCase{
         guard presentation.scale == UIScreen.main.scale else { return }
         
         let window = HostWindow(presentation: presentation, context: context)
+        controller.view.frame = presentation.size.asRect
         
-        window.rootViewController = controller
-        //window.addSubview(controller.view)
-        window.translatesAutoresizingMaskIntoConstraints = false
+        window.addSubview(controller.view)
         if #available(iOS 11.0, *) {
             controller.view.translatesAutoresizingMaskIntoConstraints = false
-            let guide = controller.view.safeAreaLayoutGuide
-            controller.view.topAnchor.constraint(equalTo: guide.topAnchor).isActive = true
-            controller.view.bottomAnchor.constraint(equalTo: guide.bottomAnchor).isActive = true
-            controller.view.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
-            controller.view.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
+            let guide = window.safeAreaLayoutGuide
+            NSLayoutConstraint.activate([controller.view.topAnchor.constraint(equalTo: guide.topAnchor),
+                                         controller.view.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
+                                         controller.view.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
+                                         controller.view.trailingAnchor.constraint(equalTo: guide.trailingAnchor)])
         }
+        
         let name = [presentation.name,
                     context.name,
                     UIDevice.current.systemName,
@@ -44,9 +44,8 @@ open class SnapshotTest: FBSnapshotTestCase{
             .filter { !$0.isEmpty }
             .joined(separator: "_")
         
-        window.isHidden = false
         window.backgroundColor = .blue
-        
+        window.makeKeyAndVisible()
         FBSnapshotVerifyView(window, identifier: name, suffixes: [""], file: file, line: line)
     }
 }
