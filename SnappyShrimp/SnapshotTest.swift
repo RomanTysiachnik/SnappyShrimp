@@ -24,8 +24,18 @@ open class SnapshotTest: FBSnapshotTestCase{
         guard presentation.scale == UIScreen.main.scale else { return }
         
         let window = HostWindow(presentation: presentation, context: context)
-
+        
         window.rootViewController = controller
+        //window.addSubview(controller.view)
+        window.translatesAutoresizingMaskIntoConstraints = false
+        if #available(iOS 11.0, *) {
+            controller.view.translatesAutoresizingMaskIntoConstraints = false
+            let guide = controller.view.safeAreaLayoutGuide
+            controller.view.topAnchor.constraint(equalTo: guide.topAnchor).isActive = true
+            controller.view.bottomAnchor.constraint(equalTo: guide.bottomAnchor).isActive = true
+            controller.view.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
+            controller.view.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
+        }
         let name = [presentation.name,
                     context.name,
                     UIDevice.current.systemName,
@@ -35,6 +45,7 @@ open class SnapshotTest: FBSnapshotTestCase{
             .joined(separator: "_")
         
         window.isHidden = false
+        window.backgroundColor = .blue
         
         FBSnapshotVerifyView(window, identifier: name, suffixes: [""], file: file, line: line)
     }
